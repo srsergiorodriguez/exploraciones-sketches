@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Camino de interpretantes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --colbg: #F3F7F4;
+        --colmain: #ed6a5a;
+        --colblack: #313030;
+        --col1: #5ca4a9;
+        --col2: #9bc1bc;
+        --contentfont: 'Noto Serif SC', serif;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+        font-family: var(--contentfont);
+      }
+
+      #general-cont {
+        padding: 20px;
+        border: solid 1px;
+        border-radius: 5px;
+        width: 500px;
+        display: flex;
+        background: var(--colbg);
+      }
+
+      #canvas-cont {
+        cursor: pointer;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div id="general-cont">
+      <div id="canvas-cont"></div>
+    </div>
+  </body>
+</html>

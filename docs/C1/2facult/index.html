@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cualidades facultativas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --colbg: #F3F7F4;
+        --colmain: #ed6a5a;
+        --colblack: #313030;
+        --col1: #5ca4a9;
+        --col2: #9bc1bc;
+        --contentfont: 'Noto Serif SC', serif;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+        font-family: var(--contentfont);
+      }
+
+      #general-cont {
+        padding: 25px;
+        border: solid 1px;
+        border-radius: 5px;
+        width: 450px;
+        background: var(--colmain);
+      }
+
+      #canvas-cont {
+        margin: 5px 0;
+      }
+
+      #interface-cont {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+
+      #audio-cont {
+        display: flex;
+        gap: 5px;
+      }
+
+      .text {
+        background: var(--colbg);
+        border-radius: 5px;
+        text-align: center;
+        padding: 0 10px;
+      }
+
+      .play-button {
+        background-image: url('./assets/play.png');
+        background-size: 100%;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .play-button:active {
+        opacity: 0.2;
+      }
+
+      .play-button:focus {
+        outline:0;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div id="general-cont">
+      <div id="canvas-cont"></div>
+      <div id=interface-cont>
+        <div id="audio-cont"></div>
+        <p class="text">La información es una diferencia que hace una diferencia</p>
+      </div>
+    </div>
+  </body>
+</html>
