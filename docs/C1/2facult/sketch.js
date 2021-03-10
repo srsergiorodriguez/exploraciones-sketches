@@ -12,7 +12,7 @@ function preload() {
 
 function setup() {
   createCanvas(450,100).parent("#canvas-cont");
-  background('#313030');
+  background('#F3F7F4');
 
   fft = new p5.FFT(0.8,256);
   const selectAudio = createSelect().parent("#audio-cont");
@@ -29,10 +29,10 @@ function setup() {
 
 function draw() {
   let waveform = fft.waveform();
-  background('#313030')
+  background('#F3F7F4');
   noFill();
   beginShape();
-  stroke(255);
+  stroke('#313030');
   strokeWeight(3);
   for (let i = 0; i < waveform.length; i++){
     let x = map(i, 0, waveform.length, 0, width);
