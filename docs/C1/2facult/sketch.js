@@ -22,22 +22,26 @@ function setup() {
   selectAudio.changed(function () {
     audioIndex = +/\d+/.exec(this.value());
   });
-  createButton("").class("play-button").parent("#audio-cont").mouseClicked(()=>{
-    audio[audioIndex].play();
+  showWaveform();
+
+  createButton("").class("play-button").parent("#audio-cont").mouseClicked(() => {
+    const selected = audio[audioIndex];
+    selected.play();
+    showWaveform(); 
   });
 }
 
-function draw() {
-  let waveform = fft.waveform();
-  background('#F3F7F4');
-  noFill();
-  beginShape();
-  stroke('#313030');
-  strokeWeight(3);
-  for (let i = 0; i < waveform.length; i++){
-    let x = map(i, 0, waveform.length, 0, width);
-    let y = map( waveform[i], -0.5, 0.5, 0, height);
-    vertex(x,y);
-  }
-  endShape();
+function showWaveform() {
+  const waveform = audio[audioIndex].getPeaks(1000);
+    background('#F3F7F4');
+    noFill();
+    beginShape();
+    stroke('#313030');
+    strokeWeight(3);
+    for (let i = 0; i < waveform.length; i++){
+      let x = map(i, 0, waveform.length, 0, width);
+      let y = map( waveform[i], -0.5, 0.5, 0, height);
+      vertex(x,y);
+    }
+    endShape();
 }
