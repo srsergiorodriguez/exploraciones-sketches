@@ -4,63 +4,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>bits</title>
+    <link rel="stylesheet" href="../../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
-      :root {
-        --colbg: #F3F7F4;
-        --colmain: #ed6a5a;
-        --colblack: #313030;
-        --col1: #5ca4a9;
-        --col2: #9bc1bc;
-        --contentfont: 'Noto Serif SC', serif;
-      }
-
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: content-box;
-        font-family: var(--contentfont);
-      }
-
       #general-cont {
         box-sizing: border-box;
         padding: 20px;
         margin: auto;
-        border: solid 1px;
+        border: solid 1px var(--colblack);
         border-radius: 5px;
-        width: 450px;
-        height: 100px;
+        width: 260px;
         display: flex;
-        background: var(--colmain);
+        background: var(--colbg);
+        gap: 20px;
       }
 
       .bit-input {
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
         border-radius: 5px;
-        margin: 2px;
         border: none;
         text-align: center;
         background: var(--colbg);
-      }
-
-      #arrow {
-        font-size: 35px;
-        padding: 0px 20px;
+        border: solid 1px var(--colblack);
       }
 
       #char-cont {
         background: var(--colbg);
         border-radius: 5px;
-        width: 50px;
+        width: 100px;
+        height: 100px;
         text-align: center;
       }
 
-      #letter {
+      #light {
+        width: 100%;
         font-size: 38px;
-        padding: 0px 5px;
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
@@ -69,9 +50,8 @@
   <body>
     <div id="general-cont">
       <div id="input-cont"></div>
-      <span id="arrow">=></span>
       <div id="char-cont">
-        <span id="letter">a</span>
+        <img id="light" src="./assets/lightoff.png" alt="bombillo"  /></span>
       </div>
     </div>
   </body>
