@@ -4,39 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>bits</title>
+    <link rel="stylesheet" href="../../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
-      :root {
-        --colbg: #F3F7F4;
-        --colmain: #ed6a5a;
-        --colblack: #313030;
-        --col1: #5ca4a9;
-        --col2: #9bc1bc;
-        --contentfont: 'Noto Serif SC', serif;
-      }
-
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: content-box;
-        font-family: var(--contentfont);
-      }
-
       #general-cont {
         box-sizing: border-box;
         padding: 20px;
         margin: auto;
-        border: solid 1px;
+        border: solid 1px var(--colblack);
         border-radius: 5px;
         width: 450px;
         height: 100px;
         display: flex;
-        background: var(--colmain);
+        background: var(--colbg);
       }
 
       .bit-input {
-        width: 50px;
+        width: 48px;
         height: 50px;
         font-size: 30px;
         border-radius: 5px;
@@ -44,6 +29,7 @@
         border: none;
         text-align: center;
         background: var(--colbg);
+        border: solid 1px var(--colblack);
       }
 
       #arrow {
