@@ -1,0 +1,15 @@
+:root {
+  --colbg: #F3F7F4;
+  --colmain: #ed6a5a;
+  --colblack: #313030;
+  --col1: #5ca4a9;
+  --col2: #9bc1bc;
+  --contentfont: 'Noto Serif SC', serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  font-family: var(--contentfont);
+}
