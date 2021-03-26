@@ -1,5 +1,6 @@
 :root {
-  --colbg: #F3F7F4;
+  /* --colbg: #F3F7F4; */
+  --colbg: white;
   --colmain: #ed6a5a;
   --colblack: #313030;
   --col1: #5ca4a9;
