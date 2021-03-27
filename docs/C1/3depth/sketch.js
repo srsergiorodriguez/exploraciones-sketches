@@ -8,30 +8,29 @@ function preload() {
   soundFormats('mp3');
   for (let i = 0; i < audioFiles.length; i++) {
     audio[i] = loadSound(`./assets/${audioFiles[i]}`);
-    //audio[i].amp(0.5);
   }
 }
 
 function setup() {
   createCanvas(450,100).parent("#canvas-cont");
-  background('#ed6a5a')//'#313030');
-
+  background(255)
   fft = new p5.FFT(0.8,256);
-  const selectAudio = createSelect().parent("#audio-cont");
-  for (let i = 0; i < audioFiles.length; i++) {
-    selectAudio.option(audioFiles[i].replace("_"," "),i);
-  }
-  selectAudio.changed(function () {
-    audioIndex = this.value();
-  });
-  createButton("").class("play-button").parent("#audio-cont").mouseClicked(()=>{
+  createButton("").class("play-button").parent("#interface-cont").mouseClicked(()=>{
     audio[audioIndex].play();
   });
+
+  createSlider(0,3,0,1).parent("#interface-cont").input(function() {
+    audioIndex = this.value();
+    value.html(audioFiles[audioIndex].replace("_"," "));
+  })
+
+  const value = createSpan(audioFiles[audioIndex].replace("_"," ")).parent("#interface-cont");
+  
 }
 
 function draw() {
   let waveform = fft.waveform();
-  background('#ed6a5a');
+  background(255);
   noFill();
   beginShape();
   stroke(0);
