@@ -50,12 +50,12 @@ function recursiveBranching(branch) {
 }
 
 function recursiveDrawing(branch) {
-  ellipse(branch.x,branch.y,radius);
-  text(random(emojis),branch.x,branch.y);
   if (branch.children) {
     for (let j = 0; j < 2; j++) {
       line(branch.x,branch.y,branch.children[j].x,branch.children[j].y);
       branch.children[j] = recursiveDrawing(branch.children[j]);
     } 
   }
+  ellipse(branch.x,branch.y,radius);
+  text(random(emojis),branch.x,branch.y);
 }
