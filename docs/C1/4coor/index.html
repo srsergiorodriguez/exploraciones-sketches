@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Tipado lógico</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      #general-cont {
+        box-sizing: border-box;
+        padding: 20px;
+        margin: auto;
+        border: solid 1px;
+        border-radius: 5px;
+        width: 615px;
+        display: flex;
+        background: var(--colbg);
+      }
+
+      #canvas-cont {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 25px;
+        align-content: center;
+      }
+      canvas {
+        border: solid 1px;
+      }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div id="general-cont">
+      <div id="canvas-cont">
+        <div id="cartesian-cont" class="canvas-square">
+          <span>Coordenadas cartesianas</span>
+        </div>
+        <div id="polar-cont" class="canvas-square">
+          <span>Coordenadas polares</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
