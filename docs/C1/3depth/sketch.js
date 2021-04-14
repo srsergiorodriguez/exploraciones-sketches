@@ -1,5 +1,5 @@
 const audio = [];
-let audioIndex = 0;
+let audioIndex = 1;
 let fft;
 
 const audioFiles = ["1_bit","3_bit","6_bit","12_bit"]
@@ -19,12 +19,12 @@ function setup() {
     audio[audioIndex].play();
   });
 
-  createSlider(0,3,0,1).parent("#interface-cont").input(function() {
+  createSlider(0,3,audioIndex,1).parent("#interface-cont").input(function() {
     audioIndex = this.value();
     value.html(audioFiles[audioIndex].replace("_"," "));
   })
 
-  const value = createSpan(audioFiles[audioIndex].replace("_"," ")).parent("#interface-cont");
+  const value = createSpan(audioFiles[audioIndex].replace("_"," ")).parent("#interface-cont").class("text");
   
 }
 

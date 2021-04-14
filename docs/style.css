@@ -15,6 +15,29 @@
   font-family: var(--contentfont);
 }
 
+/* Play butto */
+.play-button {
+  background-image: url('../../assets/play.png');
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  opacity: 0.5;
+}
+
+.play-button:active {
+  opacity: 0.1;
+}
+
+.play-button:focus {
+  outline:0;
+}
+
 /* Slider */
 
 input[type="range"] {
@@ -24,8 +47,9 @@ input[type="range"] {
   appearance: none;
   color:#111111;
   border: solid 1px;
-  background: var(--colmain);
-  height:8px;
+  background: var(--col2);
+  height:10px;
+  margin: auto;
 }
 
 input[type="range"]:focus {
@@ -39,8 +63,9 @@ input[type="range"]::-webkit-slider-thumb {
   height:20px;
   border-radius:5px;
   border:solid 2px #111111;
-  background:white;
+  background: var(--col1);
   cursor:pointer;
+  content: "adsdsa";
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
