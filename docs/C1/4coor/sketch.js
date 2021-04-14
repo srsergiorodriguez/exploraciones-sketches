@@ -56,7 +56,7 @@ let polar  = new p5(function(p) {
 
   p.setup = function() {
     p.createCanvas(s, s).parent("polar-cont");
-    polarData = p.createSpan("ángulo: 0º / distancia: 0").parent("polar-cont");
+    polarData = p.createSpan("ángulo: 0º / magnitud: 0").parent("polar-cont");
 
     p.frameRate(8);
 
@@ -103,6 +103,6 @@ let polar  = new p5(function(p) {
     p.text(emoji,mousePos.x,mousePos.y);
     
     let degAngle = angle > 0 ? angle*(180/p.PI) : ((angle*(180/p.PI)+360));
-    polarData.html(`ángulo: ${p.int(degAngle)}º / distancia: ${p.int(vec.mag())}`);
+    polarData.html(`ángulo: ${p.int(degAngle)}º / magnitud: ${p.int(vec.mag())}`);
   }
 });
