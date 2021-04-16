@@ -5,7 +5,7 @@ function setup() {
   let value = 0;
   showLightbulb(value);
   
-  createInput(value).class("bit-input")
+  createInput(str(value)).class("bit-input")
     .parent("#input-cont")
     .attribute("type","number")
     .attribute("min","0").attribute("max","1")
