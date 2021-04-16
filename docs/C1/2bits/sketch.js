@@ -6,7 +6,7 @@ function setup() {
   const letter = select("#letter");
   for (let i = 0; i < nrBits; i++) {
     code[i] = 0;
-    createInput(code[i]).class("bit-input")
+    createInput(str(code[i])).class("bit-input")
     .parent("#input-cont")
     .attribute("type","number")
     .attribute("min","0").attribute("max","1")
